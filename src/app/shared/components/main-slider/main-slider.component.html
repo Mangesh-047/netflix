@@ -6,7 +6,7 @@
                     <figure>
                         <img src="https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}" alt="Latest Movies">
                         <figcaption class="item-caption">
-                            <h2>{{movie.title}}</h2>
+                            <h2>{{movie.title || movie.original_name}}</h2>
                         </figcaption>
                     </figure>
                 </div>

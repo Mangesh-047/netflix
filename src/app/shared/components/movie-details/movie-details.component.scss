@@ -4,11 +4,27 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
 
     img {
         height: 100%;
         width: 100%;
         object-fit: cover;
+    }
+
+
+    .caption {
+        position: absolute;
+        top: 35%;
+        left: 5%;
+        width: 60%;
+
+        h2 {
+            color: #fff;
+            font-size: 4.5rem;
+            line-height: 1.2;
+            text-shadow: 8px 4px 22px rgba($color: #fff, $alpha: 1.0);
+        }
     }
 }
 

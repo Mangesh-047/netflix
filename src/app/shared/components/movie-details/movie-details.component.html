@@ -3,8 +3,15 @@
 
 
 <div class="banner" *ngIf="movieDetails"
-    [style.backgroundImage]="'url(https://image.tmdb.org/t/p/original/'+movieDetails.poster_path+')'">
+    [style.backgroundImage]="'linear-gradient(45deg, black, transparent),url(https://image.tmdb.org/t/p/original'+ movieDetails.poster_path+')'">
     <!-- <img src="https://image.tmdb.org/t/p/original/{{movieDetails.poster_path}}" alt="poster"> -->
+    <!-- https://image.tmdb.org/t/p/original/{{movieDetails.poster_path}} -->
+
+    <div class="caption">
+        <h2>
+            {{movieDetails.title ?? movieDetails.original_title}}
+        </h2>
+    </div>
 </div>
 
 
@@ -34,3 +41,10 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
 </div>
+
+
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="First">Content 1</mat-tab>
+    <mat-tab label="Second">Content 2</mat-tab>
+    <mat-tab label="Third">Content 3</mat-tab>
+</mat-tab-group>

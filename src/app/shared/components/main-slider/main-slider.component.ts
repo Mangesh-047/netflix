@@ -38,6 +38,8 @@ export class MainSliderComponent implements OnInit {
     dots: true,
     autoplay: true,
     navSpeed: 700,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
     navText: ['<<', '>>'],
     responsive: {
       0: {
