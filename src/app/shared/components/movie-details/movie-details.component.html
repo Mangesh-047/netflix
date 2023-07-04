@@ -1,0 +1,36 @@
+<!-- {{movieDetails | json}} -->
+
+
+
+<div class="banner" *ngIf="movieDetails"
+    [style.backgroundImage]="'url(https://image.tmdb.org/t/p/original/'+movieDetails.poster_path+')'">
+    <!-- <img src="https://image.tmdb.org/t/p/original/{{movieDetails.poster_path}}" alt="poster"> -->
+</div>
+
+
+<div class="trailers">
+
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-6" mb-3 *ngFor="let trailer of movieTrailers">
+                <p class="alert alert-info trailername" (click)="runTrailer(trailer.key)">
+                    <!-- {{trailer | json}} -->
+                    {{trailer.name}}
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="trailer-container" *ngIf="trailerUrl">
+
+    <button mat-raised-button class="btn btn-danger closeModal" (click)="trailerUrl = ''">
+        close
+    </button>
+
+    <iframe width="560" height="315" [src]="trailerUrl" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+</div>

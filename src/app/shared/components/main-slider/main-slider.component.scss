@@ -1,0 +1,43 @@
+::ng-deep {
+    .main-slider {
+        .owl-carousel .owl-item img {
+            display: block;
+            width: 100%;
+            height: calc(100vh - 70px);
+            object-fit: cover;
+            // object-fit: c;
+        }
+
+        .owl-nav.ng-star-inserted {
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+
+    .owl-dots.ng-star-inserted {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+    }
+
+    .item {
+        position: relative;
+        // cursor: pointer;
+
+        &-caption {
+            position: absolute;
+            top: 40%;
+            left: 5%;
+
+            h2 {
+                font-size: 4rem;
+                text-shadow: 10px 10px 20px #000;
+                color: #fff;
+            }
+        }
+    }
+}
